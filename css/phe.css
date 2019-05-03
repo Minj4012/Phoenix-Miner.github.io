@@ -447,6 +447,7 @@ color: none!important;
     width: 100%;
 }
 .phe-header {
+min-height: 382px;
     background-size: cover;
 }	
 .phe-header-flex {
