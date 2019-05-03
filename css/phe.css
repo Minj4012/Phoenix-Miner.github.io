@@ -151,9 +151,9 @@ right: 166px;
 .phe-button:hover a, .phe-button:hover i {color:#fff;text-decoration: none;  transition: 0.1s;}
 	
 
-html *,
-html *:before,
-html *:after {
+
+.phe-button *:before,
+.phe-button *:after {
   transition: 0.5s;
 
 }
