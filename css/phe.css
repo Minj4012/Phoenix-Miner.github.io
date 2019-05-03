@@ -460,6 +460,7 @@ min-height: 382px;
     width: 85%;
 }
 .phe-gpu {
+    min-height: 421px;
     background-size: cover;
 }
 .phe-items {
