@@ -50,9 +50,10 @@ background-size: contain;
 
 }
 .phe-header h1 {color:#fff;border: none;
+color: #fff;
+    border: none;
     margin: 0;
     display: block;
-    width: 39%;
     font-size: 300%;
     text-shadow: 3px 3px 1px #000;
     overflow: hidden;
@@ -72,8 +73,12 @@ background-size: contain;
 	top:0;}
 .phe-header-center {}
 .phe-header-composition {
-    position: relative;
-	width: 1000px;
+position: relative;
+    width: 375px;
+    box-shadow: 1px 1px 1px #000;
+    box-shadow: inset 93px 16px 300px 60px rgba(129, 158, 176, 0.51);
+    padding: 20px;
+    border-radius: 20px;
 }
  .green {color: #39ff39;;}
 .phe-fast {
@@ -132,6 +137,7 @@ background-size: contain;
     max-width: 250px;
     text-transform: uppercase;
 background: linear-gradient(to top,#e0eef7,#fff);
+margin: 0 auto;
 }
  .fa,  .fas,  .far,  .fab {
     color: #444;
@@ -205,7 +211,11 @@ right: 166px;
   display: flex;
   justify-content: center;
 }
-.phe-vi {max-width:1366px;margin: 0 auto;}
+.phe-vi {
+max-width: 1366px;
+    position: relative;
+    left: 62px;
+}
 .e-itm {
 width:330px;
 margin: 0px 20px;
