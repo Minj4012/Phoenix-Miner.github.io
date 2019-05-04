@@ -83,10 +83,9 @@ position: relative;
  .green {color: #39ff39;;}
 .phe-fast {
     font-size: 140%;
-    width: 35%;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
-	    margin: 0 0 20px 0
+    margin: 0 0 20px 0;
 }
 .phe-button a {
     color: #444;
