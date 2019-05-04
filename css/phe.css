@@ -555,7 +555,7 @@ min-height: 472px;
 }	
  
 .phe-header-flex {
-/* top: 62px; */
+top: 62px;
     min-height: 361px;
 }
 .phe-gpu {
