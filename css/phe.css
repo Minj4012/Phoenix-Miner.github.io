@@ -615,6 +615,9 @@ top: 34px;
 }
 }
 @media all and (min-width:1440px) and (max-width:1535px){
+	.phe-header .phe-vi {
+    margin: 0 0 0 10vw;
+}
 .phe-header {	
 min-height: 534px;
 }	
