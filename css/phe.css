@@ -638,6 +638,9 @@ min-height: 572px;
 }	
 	
 @media all and (min-width:1599px) and (max-width:1679px){
+.phe-header .phe-vi {
+    left: -396px;
+}	
 .phe-header {	
 min-height: 592px;
 }	
