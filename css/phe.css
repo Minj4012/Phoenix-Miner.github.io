@@ -461,6 +461,9 @@ color: none!important;
 #page-wrapper .phe-menu ul li {
     width: 100%;
 }
+.phe-header-composition {
+    word-break: break-all;
+}
 .phe-header {
 min-height: 382px;
     background-size: cover;
