@@ -666,7 +666,7 @@ min-height: 626px;
 min-height: 711px;
 }	
 .phe-header .phe-vi {
-    right: 367px;
+    right: -367px;
 }
 .phe-header-flex {
 top: 134px;
