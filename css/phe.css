@@ -213,6 +213,7 @@ right: 166px;
 .phe-vi {
 max-width: 1366px;
     position: relative;
+margin: 0 auto;	
 }
 .phe-header .phe-vi {
  left: 62px;
