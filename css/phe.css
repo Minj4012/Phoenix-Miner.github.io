@@ -464,6 +464,9 @@ color: none!important;
 .phe-header-composition {
     word-break: break-all;
 }
+.phe-button {
+    min-width: 0;
+}
 .phe-header {
 min-height: 382px;
     background-size: cover;
