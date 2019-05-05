@@ -467,6 +467,10 @@ color: none!important;
 .phe-button {
     min-width: 0;
 }
+.phe-header .phe-vi {
+    margin: 0;
+    max-width: 320px;
+}
 .phe-header {
 min-height: 382px;
     background-size: cover;
