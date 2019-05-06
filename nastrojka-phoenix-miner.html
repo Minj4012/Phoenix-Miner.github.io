@@ -85,77 +85,25 @@
 		</div>
 	</div>
 </section>
-<section class="phe-advantage">
-	<div class="phe-vi phe-items">
-		<div class="e-itm phe-item1">
-			<span class="phe-icon-wrap">
-				<img src="items/item1.png" alt="Smiley face" height="120" width="120">
-			</span>
-		<p class="phe-adv">Быстрый и простой</p>
-	Высоко оптимизированные ядра OpenCL и CUDA позволяют достичь максимальной скорости майнинга. Они делают добычу Ethereum на 2-4% быстрее, чем Claymore.
-		</div>
-		<div class="e-itm phe-item2">
-			<span class="phe-icon-wrap">
-				<img src="items/item2.png" alt="Smiley face" height="120" width="120">
-			</span>		
-		<p class="phe-adv">Работает на всех устройствах</p>
-Поддерживает AMD Vega, 590/580/570/480/470, 460/560, Fury, 390/290 и более старые карты AMD. Поддерживает Nvidia 20x0, 10x0 и 9x0, а также более старые карты.
-		</div>
-		<div class="e-itm phe-item3">
-			<span class="phe-icon-wrap">
-				<img src="items/item3.png" alt="Smiley face" height="120" width="120">
-			</span>		
-		<p class="phe-adv">Низкая комиссия</p>
-Самая низкая комиссия в размере 0,65% (всего 35 секунд в майнинге за каждые 90 минут). Против комисии в майнере Claymore, которая составляет - 1% (за каждые 90 минут работы) .
-		</div>
-	</div>
-</section>
 
-
-<section class="phe-gpu">
-	<!--
-	div class="phe-gpu-img">
-	</div>
-	-->
-</section>
-
-
-<section class="phe-start">
+<section class="phe-art">
+<H1 class="phe-title"><a id="start">Настройка Claymore Miner для Nicehash и карт NVIDIA 1080/1080TI
+</a></h1>
 	<div class="phe-vi2">
-		<div class="phe-title"><a id="start">Настройка для запуска</a></div>
-			<p class="phe-st">Шаг 1: Скачайте майнер</p>
-		<div class="phe-row">Нажмите <a href="https://github.com/Phoenix-Miner/PhoenixMiner/releases/download/4.2c/PhoenixMiner_4.2c_Windows.Password-phoenix.zip">здесь, чтобы скачать PhoenixMiner.</a><br>
-После завершения загрузки извлеките содержимое .zip архива. <br>
-В папке, содержащей майнер, вы должны создать или отредактировать файл с расширением .bat. Вы можете сделать это в любом текстовом редакторе (например, Блокноте). Когда вы сохраняете файл, важно выбрать «Все файлы» в качестве типа файла, а не «txt». В противном случае у вас будет .bat.txt в конце имени файла, и майнер не сможет открыть этот файл. Ваш bat файл (скажем, он называется <span class="phe-grn">1_Ehereum-nanopool.bat</span>) должен содержать следующий текст (шаг 2):
-		</div>
-			<p class="phe-attention">Внимание! Из соображений безопасности Windows может помешать вам открыть bat файл. В этом случае вы должны разрешить его открытие во всплывающем окне.</p>
-			<p class="phe-st">Шаг 2: Введите следующую команду:</p>
-		<div class="phe-row">
-<pre><code><span class="nev2">setx GPU_FORCE_64BIT_PTR 0
-setx GPU_MAX_HEAP_SIZE 100
-setx GPU_USE_SYNC_OBJECTS 1
-setx GPU_MAX_ALLOC_PERCENT 100
-setx GPU_SINGLE_ALLOC_PERCENT 100</span>
-PhoenixMiner.exe -epool eth-eu2.nanopool.org:9999 -worker <span class="phe-grn">YOUR_RIG_NAME</span> -wal <span class="phe-grn">YOUR_WALLET ADDRESS</span> -pass x</code></pre>
+<p>Claymore обычно попадает на ваш жесткий диск через сторонние загрузки через программу Nicehash, и о нем быстро забывают. Вы, вероятно, хотите, по крайней мере, обновить его, это важно для этого руководства. </p>
+<p>Майнинг Эфириума на 1080 / 1080ти? Разве это не должно быть малоприбыльно? Да. Но карты достаточно сильны, чтобы способным добывать хороший Ethereum, а затем можно добавить 30-40% максимальной скорости хеширования.</p>
+<p>Прежде всего, нужно убедиться, что ваша карта находится в состоянии P0, а не в состоянии P2. Если она находится в состоянии P2, вы теряете частоты памяти, которые Claymore Miner хотел бы использовать. Как? Убедитесь, что ваши настройки установлены правильно. </p>
+
+<p>
+<a href="items/start/how/p0.png" target="_blank">
+<img src="items/start/how/p0.png" alt="p0"></a>
+</p>
+<p><strong>Если у вас не стоит </strong><strong>P</strong><strong>0 - сбросьте текущие настройки OC</strong>. Есть два способа сделать это:</p>
 
 
-		</div>
-		<p class="phe-st">Шаг 3: Настройте майнер на свой кошелек</p>
-		<div class="phe-row"><span class="phe-grn">АДРЕС_КОШЕЛЬКА</span> - введите <span class="phe-grn">ВАШ</span> адрес кошелька Ethereum (так PhoenixMiner Miner узнает куда отправлять Вашу прибыль)
 
-		<span class="phe-grn">ИМЯ_УСТРОЙСТВА</span> – вы можете выбрать любое имя (например, asus), но есть ограничения: имя должно быть не более 32 символов, содержать только буквы и цифры (без специальных символов, таких как $% »*; @).
-		</div>
-		<p class="phe-st">Шаг 4: Начните майнинг</p>
-		<div class="phe-row">Дважды щелкните <span class="phe-grn">Ваш Bat файл</span> чтобы запустить PhoenixMiner. Майнер запустится, применит команды setx для установки переменных среды, инициализирует каждую видеокарту, создаст DAG файл  и начнет добывать криптовалюту. Дайте программе поработать примерн 30 секунд, а затем нажмите «s», чтобы отобразить вашу скорость добычи. Если вы выполнили все шаги, описанные выше, вы должны увидеть такой экран:
-		</div>
-	<div class="phe-arr">
-	</div>
-	</div>
-</section>
-
-<section class="phe-hash">
-	<div class="phe-img">
-	</div>
+<p>Загрузите текущую версию по ссылкам для скачивания в Github или Mega (не используйте ссылки других людей). Текущая версия на момент написания этой статьи - 12.0.</p>
+</div>
 </section>
 
 <section class="phe-down">
@@ -179,20 +127,6 @@ PhoenixMiner.exe -epool eth-eu2.nanopool.org:9999 -worker <span class="phe-grn">
 </section>
 
 
-<section class="phe-check">
-	<div class="phe-title"><a id="check">Как проверить свой баланс?</a></div>
-	<div class="phe-vi2">
-<p>Теперь, когда ваш майнер настроен, вы можете видеть, как ваши видеокарты ежедневно приносят вам пассивный доход в форме Ethereum или любой другой Ethash монеты. Важно учитывать любые переменные затраты, которые вы можете понести во время майнинга, чтобы определить вашу прибыльность. Переменными затратами могут быть затраты на электроэнергию, расходы на техническое обслуживание, комиссия за пул, комиссия за вывод, комиссия обменников и т.д.
-</p>
-<p>У каждого пула индивидуальный интерфейс, но сам принцип остается таким же. Вам нужно будет войти на сайт вашего пула и ввести адрес вашего Ethereum кошелька. Давайте возьмем пул Nanopool в качестве примера.</p>
-<p>
-Вы вводите свой адрес Ethereum кошелька в строке поиска, и вы сможете увидеть всю информацию о вашей прибыли по добыче Ethereum. В случае Nanopool, когда ваш баланс достигнет отметки в 0,01 ETH, он будет отправлен на ваш адрес Ethereum кошелька, который вы ввели в файл Ehereum-nanopool.bat ранее.</p>
-	</div>
-<div class="phe-pc">
-</div>
-</section>
-
-
 
 <!--
 <section class="phe-comm">
@@ -203,25 +137,6 @@ PhoenixMiner.exe -epool eth-eu2.nanopool.org:9999 -worker <span class="phe-grn">
 	</div>
 </section>
 -->
-<section class="phe-faq">
-<div class="phe-title"><a id="FAQ">Часто задаваемые вопросы</a></div>
-	<div class="phe-vi2">
-
-	<p class="phe-st">Как устроен майнинг Ethereum?</p>
-Результат цифрового майнинга называется системой proof of work. Однако добыча Эфириума означает больше, чем увеличение объема Эфира в обращении. Она также необходима для защиты сети Ethereum, поскольку она создает, проверяет, публикует и распространяет блоки в блокчейне монеты.
-	<p class="phe-st">Что нужно, чтобы добывать Ethereum?</p>
-		<ol>
-			<li>Видеокарты с памятью от 4GB.</li>
-			<li>Драйверы для видеокарты;</li>
-			<li>Кошелек Ethereum для хранения всей вашей валюты;</li>
-			<li>Майнинг-программа (PhoenixMiner);</li>
-			<li>Адрес майнинг-пула;</li>
-		</ol>
-
-	<p class="phe-st">Сколько Эфириума можно добыть?</p>
-Большинство блоков Ethereum составляют около 2 МБ. Новый блок ETH создается каждые 14 секунд. 18 миллионов Эфира добываются каждый год.
-	</div>
-</section>
 
 
 <!-- footer-->
