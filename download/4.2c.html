@@ -83,80 +83,11 @@
 		</div>
 	</div>
 </section>
-<section class="phe-advantage">
-	<div class="phe-vi phe-items">
-		<div class="e-itm phe-item1">
-			<span class="phe-icon-wrap">
-				<img src="items/item1.png" alt="Smiley face" height="120" width="120">
-			</span>
-		<p class="phe-adv">Fast & Easy</p>
-		Effective Ethereum mining speed is higher by 3-5% because of a completely different miner code - much less invalid and outdated shares, higher GPU load, optimized OpenCL code, optimized assembler kernels.
-		</div>
-		<div class="e-itm phe-item2">
-			<span class="phe-icon-wrap">
-				<img src="items/item2.png" alt="Smiley face" height="120" width="120">
-			</span>		
-		<p class="phe-adv">Works On All Devices</p>
-Supports both AMD and nVidia cards (including in mixed mining rigs). It runs under Windows x64 and Linux x64.
-		</div>
-		<div class="e-itm phe-item3">
-			<span class="phe-icon-wrap">
-				<img src="items/item3.png" alt="Smiley face" height="120" width="120">
-			</span>		
-		<p class="phe-adv">Stability & Reliability</p>
-The watchdog timer checks periodically if any of the GPUs freezes and if it does, restarts the miner.
-		</div>
-	</div>
-</section>
 
 
-<section class="phe-gpu">
-	<!--
-	div class="phe-gpu-img">
-	</div>
-	-->
-</section>
 
 
-<section class="phe-start">
-	<div class="phe-vi2">
-		<div class="phe-title"><a id="start">Getting Started</a></div>
-			<p class="phe-st">Step 1: Download the miner</p>
-		<div class="phe-row">Click <a href="https://github.com/Phoenix-Miner/PhoenixMiner/releases/download/4.2c/PhoenixMiner_4.2c_Windows.Password-phoenix.zip">here to download PhoenixMiner</a><br>
-Once the download is complete, extract the contents of the .zip file<br>
-		In the folder that contains the miner, you should create or edit a file with .bat extension. You can do this in any text editor (for example, Notepad). When you save the file, it’s important to choose ‘All Files’ as a file type, not ‘txt’. Otherwise, you’ll have .bat.txt at the end of the file name, and miner won’t be able to open this file. Your bat file (let’s say it’s called <span class="phe-grn">1_Ehereum-nanopool.bat</span>) should contain the following text (Step 2):
-		</div>
-			<p class="phe-attention">Attention! For security reasons, Windows may stop you from opening the bat file. In this case, you should permit it to open in the pop-up window.</p>
-			<p class="phe-st">Step 2: Enter the following command:</p>
-		<div class="phe-row">
-<pre><code><span class="nev2">setx GPU_FORCE_64BIT_PTR 0
-setx GPU_MAX_HEAP_SIZE 100
-setx GPU_USE_SYNC_OBJECTS 1
-setx GPU_MAX_ALLOC_PERCENT 100
-setx GPU_SINGLE_ALLOC_PERCENT 100</span>
-PhoenixMiner.exe -epool eth-eu2.nanopool.org:9999 -worker <span class="phe-grn">YOUR_RIG_NAME</span> -wal <span class="phe-grn">YOUR_WALLET ADDRESS</span> -pass x</code></pre>
 
-
-		</div>
-		<p class="phe-st">Step 3: Configure the miner with your settings</p>
-		<div class="phe-row"><span class="phe-grn">WALLET_ADDRESS</span> - enter <span class="phe-grn">YOUR</span> Ethereum wallet address (this is how PhoenixMiner Miner knows where to deposit your ETH)
-
-		<span class="phe-grn">RIG_NAME</span> – you can choose any name (like test), but don’t exaggerate: it should be 32 symbols max, contain only letters and numbers (no special characters like $%»*;@).
-		</div>
-		<p class="phe-st">Step 4: Start mining</p>
-		<div class="phe-row">Double click <span class="phe-grn">your Bat file</span> to start the miner. The miner will start, run the setx commands to set those environment variables, initialize each of your GPU’s, build the DAG file on each of your GPU’s and start hashing away. Let it run for about 20 seconds and then click “s” to display your Hashing speed.
-
-		If you’ve followed the steps above you should see this screen.
-		</div>
-	<div class="phe-arr">
-	</div>
-	</div>
-</section>
-
-<section class="phe-hash">
-	<div class="phe-img">
-	</div>
-</section>
 
 <section class="phe-down">
 <div class="phe-title whitez1"><a id="download">Getting Started With Ethereum Mining</a></div>
