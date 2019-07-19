@@ -86,44 +86,27 @@
 
 
 <section class="phe-art">
-<H1 class="phe-title"><a id="start">Скачать Phoenix Miner для  Ethereum (amd+nvidia)</a></h1>
+<H1 class="phe-title"><a id="start">Download Phoenix Miner for  Ethereum (amd+nvidia)</a></h1>
 	<div class="phe-vi2">
 	
-<p>4.5b:</p>
+<p>4.2c:</p>
 <ul>
-  <li><p>Changes in Nvidia kernels for more stable work and better utilization of the GPU</p></li>
-  <li><p>Implemented ProgPOW BCI mining for Nvidia cards too. Under Windows you must download and unpack the file PhoenixMiner_NVRTC_Windows.zip in the same folder as PhoenixMiner.exe in order to mine BCI with Nvidia cards.</p></li>
-  <li><p>Added support for all new AMD Windows drivers up to the latest 19.7.2</p></li>
-  <li><p>Added support for all new AMD Linux drivers up to the latest 19.30-838629</p></li>
-  <li><p>Added hardware control and monitoring (clocks, voltages, fans, etc.) for Nvidia cards under Windows. Note that you should specify the clocks for Nvidia cards relative to the defaults (e.g. <code>-mclock +400</code> instead of <code>-mclock 4400</code>)</p></li>
-  <li><p>Added hardware control and monitoring (clocks, voltages, fans, etc.) for Radeon VII cards (Windows only)</p></li>
-  <li><p>Added advanced hardware monitoring (specify <code>-hstats 2</code> to activate it). It will show you the GPU core and memory clocks, voltages, and P<code>-states</code> (if supported)</p></li>
-  <li><p>Added GPU power consumption if the driver reports it. You can also specify the idle power (<code>-pidle</code>), PSU/GPU efficiency (<code>-ppf</code>) and electricity cost (<code>-prate</code>) and have the miner calculate the daily electricity costs for you. If you are using third-party mining software which doesn't expect the power consumption figures in the miner's log, you can disable it by specifying <code>-hstats 0</code></p></li>
-  <li><p>Added new parameter <code>-mt</code> to set the memory timings on AMD cards. <code>-mt 0</code> is the default, which uses the VBIOS memory timings. <code>-mt 1</code>, and <code>-mt 2</code> use predefined memory timings that are independent from the VBIOS timings. This option is useful for mining with RX580/570/560/480/470/460 cards without modding the VBIOS. This works only on Windows and with relatively recent drivers (from the last 6<code>-8 months)</p></li>
-  <li><p>The bench mode now works for dual mining and ProgPOW. The algorithm is determined by the <code>-coin</code> and <code>-dcoin</code> parameters. E.g. <code>-bench 10</code> <code>-coin bci</code> will bench the BCI ProgPOW, and <code>-bench 10</code> <code>-dcoin blake2s</code> will bench the dual mining</p></li>
-  <li><p>Increased the maximum supported DAG epoch to 450. Note that AMD drivers don't allow buffers larger than 4 GB so the biggest possible DAG epoch with current AMD drivers is 378</p></li>
-  <li><p>Added the ability to read the "FriendlyName" from Windows registry and use it (if available) instead of the generic card name from the driver</p></li>
-  <li><p>Fixed the devfee pools for some of the alternative coins like PIRL and others where many pools either disappeared or are using old pre-fork versions of the clients and are mining on the wrong blockchain</p></li>
+  <li><p>Added support for dual mining Ethash and Blake2s on Nvidia GPUs</p></li>
+  <li><p>Added new Nvidia kernels v3 with slightly higher hashrate and lower power consumption (up to about 1-1.5% less power). The new kernels are supported only on GTX1050/1060/1070/1080/Ti GPUs and are enabled by default on these GPUs. Note that you can't use these kernels for dual-mining, only <code>-nvkernel 2</code> works for dual mining on Nvidia.</p></li>
+  <li><p>Added new command-line option <code>-nvkernel</code> to select the old (v1 CUDA kernels from PhoenixMiner 3.5), newer (v2 introduced with PhoenixMiner 4.0), or the latest CUDA kernels (v3). The possible values are 0 (auto; the default, selects the best kernel for each GPU), 1 , 2, or 3 (forces v1, v2, or v3 kernels respectively). Note that only v2 CUDA kernels support dual mining.</p></li>
+  <li><p>Added experimental support for ProgPOW mining of Bitcoin Interest (BCI). Note that the kernels are not optimized and only work on AMD. You must add <code>-coin bci</code> to the command line (or COIN: bci to your epools.txt file) in order to mine BCI.</p></li>
+  <li><p>Added parameter to enable or disable driver-specific optimizations on Nvidia GPUs. Use <code>-nvdo 1</code> (the default is 0) to enable the optimizations. This won't change hashrate (or will change it only slightly) but can make the cards more stable depending on the concrete Nvidia driver.</p></li>
+  <li><p>Added support for EthereumStratum/2.0.0 protocol (use <code>-proto 5</code> if the pool requires it).</p></li>
+  <li><p>AMD hardware control code was rewritten, now should be more stable and work on older cards too</p></li>
+  <li><p>Added command-line option <code>-fcm</code> to set the way fans are controlled (AMD/Windows only). The possible values are 0 (auto; the default behavior), 1 (use VBIOS/driver), 2 (force custom control of the fans regardless of VBIOS/drivers fan curves, etc). Use <code>-fcm 2</code> if the&nbsp; fans are not controlled properly or at all</p></li>
+  <li><p>Added support for Radeon VII</p></li>
+  <li><p>Added support for Windows AMD drivers 19.3.3</p></li>
+  <li><p>Increased the maximum supported DAG epoch to 329. This should be fine for at least a year or so.</p></li>
+  <li><p>Added support for direct mining without DAG switching of Yocoin (YOC), Bitcoiin2Gen (B2G), Ethersocial (ESN), Atheios (ATH), and REOSC. See the <code>-coin parameter in Readme.txt for more information.</p></li>
+  <li><p>Fixed the slower DAG generation on Vega and Radeon VII GPUs</p></li>
+  <li><p>Fixed the problem with the watchdog timer when solo mining</p></li>
   <li><p>Other small improvements and fixes.</p></li>
 </ul>
-<ul>
-  <li><p>теперь драйвер майнера не требует переключения Windows в тестовый режим. Если вы хотите отключить тестовый режим, используйте команду <code>-driver uninstall</code> (с правами администратора) и перезагрузите компьютер, затем запустите майнер с правами администратора, чтобы при необходимости автоматически устанавливать новый драйвер (или напрямую используйте команду <code>-driver install</code>). </p>
- <p>Если у вас есть какие-либо проблемы с подписанным драйвером, вы можете использовать ключ <code>-driver install_test</code>, он использует старый подход: включает тестовый режим (требуется перезагрузка) и устанавливает неподписанный драйвер.</p></li>
-  <li><p>добавлен параметр <code>-showpower</code> для отслеживания статистики энергопотребления видеокартой, нажмите «s», чтобы увидеть ее. Поддерживаются карты AMD и Nvidia, за исключением драйверов Linux gpu-pro и карт Radeon7. </p></li>
-  <li><p>обновлен Remote Manager для отображения общего энергопотребления. </p></li>
-  <li><p>исправлена проблема с параметром <code>-logsmaxsize</code>, когда параметр <code>-logfile</code> используется для указания каталога для файлов журнала</p></li>
-  <li><p>несколько мелких исправлений и улучшений.</p></li>
-</ul>
-
-<p>Dual Ethereum GPU Miner от Claymore - лучший майнер на сегодняшний день!</p>
-
-
-<h2>Как установить и скачать Claymore</h2>
-
-<p>Впечатляющие результаты от Claymore 14.7. хэшрейт на 2% выше, чем у Bminer + pill 
-GTX 1080 (тайминг 6) ~ 42 Mh/s при 110 Вт 
-GTX 1080ti (тайминг 6) ~ 56 Mh/s при 185 Вт</p>
-
 
 </div>
 </section>
