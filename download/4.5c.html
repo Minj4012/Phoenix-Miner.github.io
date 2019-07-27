@@ -90,23 +90,11 @@
 	<div class="phe-vi2">
 	
 <p>4.5c:</p>
-<ul>
-  <li><p>Changes in Nvidia kernels for more stable work and better utilization of the GPU</p></li>
-  <li><p>Implemented ProgPOW BCI mining for Nvidia cards too. Under Windows you must download and unpack the file PhoenixMiner_NVRTC_Windows.zip in the same folder as PhoenixMiner.exe in order to mine BCI with Nvidia cards.</p></li>
-  <li><p>Added support for all new AMD Windows drivers up to the latest 19.7.2</p></li>
-  <li><p>Added support for all new AMD Linux drivers up to the latest 19.30-838629</p></li>
-  <li><p>Added hardware control and monitoring (clocks, voltages, fans, etc.) for Nvidia cards under Windows. Note that you should specify the clocks for Nvidia cards relative to the defaults (e.g. <code>-mclock +400</code> instead of <code>-mclock 4400</code>)</p></li>
-  <li><p>Added hardware control and monitoring (clocks, voltages, fans, etc.) for Radeon VII cards (Windows only)</p></li>
-  <li><p>Added advanced hardware monitoring (specify <code>-hstats 2</code> to activate it). It will show you the GPU core and memory clocks, voltages, and P<code>-states</code> (if supported)</p></li>
-  <li><p>Added GPU power consumption if the driver reports it. You can also specify the idle power (<code>-pidle</code>), PSU/GPU efficiency (<code>-ppf</code>) and electricity cost (<code>-prate</code>) and have the miner calculate the daily electricity costs for you. If you are using third-party mining software which doesn't expect the power consumption figures in the miner's log, you can disable it by specifying <code>-hstats 0</code></p></li>
-  <li><p>Added new parameter <code>-mt</code> to set the memory timings on AMD cards. <code>-mt 0</code> is the default, which uses the VBIOS memory timings. <code>-mt 1</code>, and <code>-mt 2</code> use predefined memory timings that are independent from the VBIOS timings. This option is useful for mining with RX580/570/560/480/470/460 cards without modding the VBIOS. This works only on Windows and with relatively recent drivers (from the last 6-8 months)</p></li>
-  <li><p>The bench mode now works for dual mining and ProgPOW. The algorithm is determined by the <code>-coin</code> and <code>-dcoin</code> parameters. E.g. <code>-bench 10</code> <code>-coin bci</code> will bench the BCI ProgPOW, and <code>-bench 10</code> <code>-dcoin blake2s</code> will bench the dual mining</p></li>
-  <li><p>Increased the maximum supported DAG epoch to 450. Note that AMD drivers don't allow buffers larger than 4 GB so the biggest possible DAG epoch with current AMD drivers is 378</p></li>
-  <li><p>Added the ability to read the "FriendlyName" from Windows registry and use it (if available) instead of the generic card name from the driver</p></li>
-  <li><p>Fixed the devfee pools for some of the alternative coins like PIRL and others where many pools either disappeared or are using old pre-fork versions of the clients and are mining on the wrong blockchain</p></li>
-  <li><p>Other small improvements and fixes.</p></li>
-</ul>
 
+<ul>
+	<li>Added support for the latest AMD Windows drivers 19.7.3</li>
+	<li>Fixed issue with ProgPOW BCI mining on Nvidia RTX20x0 and GTX16x0 cards</li>
+</ul>
 
 
 </div>
