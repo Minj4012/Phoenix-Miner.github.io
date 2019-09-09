@@ -91,10 +91,21 @@
 	
 <p>4.6b:</p>
 
-<ul>
-	<li>Added support for the latest AMD Windows drivers 19.7.3</li>
-	<li>Fixed issue with ProgPOW BCI mining on Nvidia RTX20x0 and GTX16x0 cards</li>
-</ul>
+<p>&nbsp; - Added optimized kernels for AMD RX5700 (Navi) GPUs under Windows (you need AMD driver 19.9.1 to use these kernels)</p>
+
+<p>&nbsp; - Implemented hardware control (setting clocks, voltages, power limit, fan control) for AMD cards under Linux. Requires PhoenixMiner running with root permissions. The clocks and voltage control require relatively new drivers (tested on 19.30-855429) and adding the following boot parameter to Linux kernel: amdgpu.ppfeaturemask=0xffffffff</p>
+
+<p>&nbsp; - Added advanced hardware stats (-hstats 2) for Nvidia cards under Linux</p>
+
+<p>&nbsp; - Added advanced hardware stats (-hstats 2) for AMD cards under Linux (requires relatively new drivers)</p>
+
+<p>&nbsp; - Implemented proper fan control for latest Nvidia cards from 20x0 and 16x0 series (Windows)</p>
+
+<p>&nbsp; - Added support for all new AMD Windows drivers up to the latest 19.9.1</p>
+
+<p>&nbsp; - Added support for all new AMD Linux drivers up to the latest 19.30-855429</p>
+
+<p>&nbsp; - Other small improvements and fixes.</p>
 <p>
 <a href="../items/version/4.6b.png" target="_blank">
 <img src="../items/version/4.6b.png" alt="phoenixminer 4.6b"></a>
