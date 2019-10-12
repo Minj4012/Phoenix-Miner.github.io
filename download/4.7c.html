@@ -4,8 +4,9 @@
 <!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="ru" dir="ltr"><![endif]-->
 <!--[if IE 8]><html class="lt-ie9" lang="ru" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="ru" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
 <head>
-<title>Download PhoenixMiner 4.7c [GPU] (Ethereum AMD/NVIDIA) [2019]</title>
+<title>Download PhoenixMiner 4.7c [GPU] (AMD/NVIDIA Ethereum) [2019]</title>
 <meta charset="utf-8" />
 <link rel="shortcut icon" href="items/favicon.ico" type="image/x-icon" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -53,7 +54,7 @@
 <body>
 
 <div id="page-wrapper">
-  <div id="page" class="page at-mt">
+  <div id="page" class="page at-mt phe-inner">
 
 
 <div id="menu-bar" class="nav clearfix">
@@ -61,10 +62,9 @@
 
 		<div class="menu-toggle">
 			<ul class="menu clearfix">
+				<li class="first leaf"><a href="https://phoenix-miner.github.io" title="">Home</a></li>
 				<li class="first leaf"><a href="#start" title="">Getting Started</a></li>
-				<li class="leaf"><a href="#check" title="">My Balance</a></li>
 				<li class="leaf"><a href="#download" title="">Download</a></li>
-				<li class="last leaf"><a href="#FAQ" title="">FAQ</a></li>
 			</ul>
 		</div>  
 	</nav>
@@ -83,80 +83,39 @@
 		</div>
 	</div>
 </section>
-<section class="phe-advantage">
-	<div class="phe-vi phe-items">
-		<div class="e-itm phe-item1">
-			<span class="phe-icon-wrap">
-				<img src="items/item1.png" alt="Smiley face" height="120" width="120">
-			</span>
-		<p class="phe-adv">Fast & Easy</p>
-		Effective Ethereum mining speed is higher by 3-5% because of a completely different miner code - much less invalid and outdated shares, higher GPU load, optimized OpenCL code, optimized assembler kernels.
-		</div>
-		<div class="e-itm phe-item2">
-			<span class="phe-icon-wrap">
-				<img src="items/item2.png" alt="Smiley face" height="120" width="120">
-			</span>		
-		<p class="phe-adv">Works On All Devices</p>
-Supports both AMD and nVidia cards (including in mixed mining rigs). It runs under Windows x64 and Linux x64.
-		</div>
-		<div class="e-itm phe-item3">
-			<span class="phe-icon-wrap">
-				<img src="items/item3.png" alt="Smiley face" height="120" width="120">
-			</span>		
-		<p class="phe-adv">Stability & Reliability</p>
-The watchdog timer checks periodically if any of the GPUs freezes and if it does, restarts the miner.
-		</div>
-	</div>
-</section>
 
 
-<section class="phe-gpu">
-	<!--
-	div class="phe-gpu-img">
-	</div>
-	-->
-</section>
-
-
-<section class="phe-start">
+<section class="phe-art">
+<H1 class="phe-title"><a id="start">Phoenix Miner for  Ethereum (amd+nvidia)</a></h1>
 	<div class="phe-vi2">
-		<div class="phe-title"><a id="start">Getting Started</a></div>
-			<p class="phe-st">Step 1: Download the miner</p>
-		<div class="phe-row">Click <a href="https://github.com/Phoenix-Miner/PhoenixMiner/releases/download/4.7c/PhoenixMiner_4.7c_Windows.Password-phoenix.zip">here to download PhoenixMiner</a><br>
-Once the download is complete, extract the contents of the .zip file<br>
-		In the folder that contains the miner, you should create or edit a file with .bat extension. You can do this in any text editor (for example, Notepad). When you save the file, it’s important to choose ‘All Files’ as a file type, not ‘txt’. Otherwise, you’ll have .bat.txt at the end of the file name, and miner won’t be able to open this file. Your bat file (let’s say it’s called <span class="phe-grn">1_Ehereum-nanopool.bat</span>) should contain the following text (Step 2):
-		</div>
-			<p class="phe-attention">Attention! For security reasons, Windows may stop you from opening the bat file. In this case, you should permit it to open in the pop-up window.</p>
-			<p class="phe-st">Step 2: Enter the following command:</p>
-		<div class="phe-row">
-<pre><code><span class="nev2">setx GPU_FORCE_64BIT_PTR 0
-setx GPU_MAX_HEAP_SIZE 100
-setx GPU_USE_SYNC_OBJECTS 1
-setx GPU_MAX_ALLOC_PERCENT 100
-setx GPU_SINGLE_ALLOC_PERCENT 100</span>
-PhoenixMiner.exe -epool eth-eu2.nanopool.org:9999 -worker <span class="phe-grn">YOUR_RIG_NAME</span> -wal <span class="phe-grn">YOUR_WALLET ADDRESS</span> -pass x</code></pre>
+		
+<p>4.7c:</p>
 
+<ul>
+	<li>New kernels for Navi (RX5700) with better stability. Should solve the freezing and restarts that some miners are experiencing with Navi cards</li>
+	<li>Reduced VRAM usage for both AMD and Nvidia cards on Windows and Linux</li>
+	<li>Added command-line option&nbsp;<strong>-config</strong>&nbsp;to load a config.txt file. This allows combining command-line options and config.txt file.</li>
+	<li>Added support for mining QuarkChain (QKC) without DAG switching on devfee (use&nbsp;<strong>-coin qkc</strong>)</li>
+	<li>Added support for the latest AMD Windows drivers 19.9.3</li>
+	<li>Other small improvements and fixes.<br />
+	When using the new&nbsp;<strong>-config</strong>&nbsp;option, please note the following:</li>
+</ul>
 
-		</div>
-		<p class="phe-st">Step 3: Configure the miner with your settings</p>
-		<div class="phe-row"><span class="phe-grn">WALLET_ADDRESS</span> - enter <span class="phe-grn">YOUR</span> Ethereum wallet address (this is how PhoenixMiner Miner knows where to deposit your ETH)
+<ul>
+	<li>The order of the options is important. For example, if we have a config.txt file that contains&nbsp;<strong>-cclock 1000</strong>&nbsp;and we specify command line&nbsp;<strong>-cclock 1100 -config config.txt</strong>, the option from the config.txt file will take precedence and the resulting&nbsp;<strong>-cclock</strong>&nbsp;will be 1000. If the order is reversed (<strong>-config config.txt -cclock 1100</strong>) then the second option takes precedence and the resulting&nbsp;<strong>-cclock</strong>&nbsp;will be 1100.</li>
+	<li>Only one&nbsp;<strong>-config</strong>&nbsp;option is allowed</li>
+	<li>If you reload the config file with 'c' key or with the remote interface, its options will take precedence over whatever you have specified in the command-line.</li>
+</ul>
 
-		<span class="phe-grn">RIG_NAME</span> – you can choose any name (like test), but don’t exaggerate: it should be 32 symbols max, contain only letters and numbers (no special characters like $%»*;@).
-		</div>
-		<p class="phe-st">Step 4: Start mining</p>
-		<div class="phe-row">Double click <span class="phe-grn">your Bat file</span> to start the miner. The miner will start, run the setx commands to set those environment variables, initialize each of your GPU’s, build the DAG file on each of your GPU’s and start hashing away. Let it run for about 20 seconds and then click “s” to display your Hashing speed.
+<a href="../items/version/4.7c.png" target="_blank">
+<img src="../items/version/4.7c.png" alt="phoenixminer 4.7c"></a>
+<span class="img-tit nev">PhoenixMiner</span>
+</p>
 
-		If you’ve followed the steps above you should see this screen.
-		</div>
-	<div class="phe-arr">
-	</div>
-	</div>
+</div>
 </section>
 
-<section class="phe-hash">
-	<div class="phe-img">
-	</div>
-</section>
+
 
 <section class="phe-down">
 <div class="phe-title whitez1"><a id="download">Getting Started With Ethereum Mining</a></div>
@@ -179,49 +138,7 @@ PhoenixMiner.exe -epool eth-eu2.nanopool.org:9999 -worker <span class="phe-grn">
 </section>
 
 
-<section class="phe-check">
-	<div class="phe-title"><a id="check">How to check how much you’ve mined?</a></div>
-	<div class="phe-vi2">
-<p>Now that your miner is set up, you’re able to sit back and watch as your video cards gain you passive income every day in the form of Ethereum. It is important to consider any variable costs that you may incur during the mining to determine your profitability. Variable costs may be electrical costs, maintenance costs, pool fees, dev fees, exchange fees, etc.</p>
-	<p>Every pool has a different interface but the principle stays the same. You’ll need to go to your pools website and type in your public wallet address. Let us use pheeremine pool as an example.</p>
-	<p>You type your public wallet address in the search bar and you’ll be able to see all of the information about your Ethereum mining efforts. 
-	In the case of pheeremine pool once your balance reaches 0.01 ETH it will get sent to your wallet address that you’ve typed into the start.bat file earlier.</p>
-	</div>
-<div class="phe-pc">
-</div>
-</section>
 
-
-
-<!--
-<section class="phe-comm">
-	<div class="phe-vi2">
-<code>-epool</code>  pheereum pool address. Only Stratum protocol is supported for pools. Miner supports all pools that are compatible with Dwarfpool proxy and accept pheereum wallet address directly.
-	
-	
-	</div>
-</section>
--->
-<section class="phe-faq">
-<div class="phe-title"><a id="FAQ">FAQ</a></div>
-	<div class="phe-vi2">
-
-	<p class="phe-st">How does Ethereum mining work?</p>
-The result of digital mining is called proof of work system. ... However, mining Ethereum means more than increasing the volume of Ether in circulation. It is also necessary for securing the Ethereum network as it creates, verifies, publishes, and propagates blocks in the blockchain.
-	<p class="phe-st">What do you need to mine Ethereum?</p>
-		<ol>
-			<li>An Ethereum wallet to hold all of your newly found currency;</li>
-			<li>GPU drivers;</li>
-			<li>A mining application (PhoenixMiner's Dual Ethereum  AMD+NVIDIA GPU Miner);</li>
-			<li>A mining pool address if you're going to mine within a mining pool;</li>
-			<li>A graphics card (GPU) with at least 4gb of RAM.</li>
-		</ol>
-
-
-	<p class="phe-st">How many Ethereum can be mined?</p>
-	Most Ethereum blocks are around 2mb. A new Ethereum block is created every 14 seconds. 18 Million Ether are mined every year.
-	</div>
-</section>
 
 
 <!-- footer-->
