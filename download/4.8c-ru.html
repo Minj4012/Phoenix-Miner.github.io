@@ -5,14 +5,14 @@
 <!--[if IE 8]><html class="lt-ie9" lang="ru" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="ru" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
 <head>
-<title>Phoenix Miner Настройка и Пошаговая  Инструкция [2019]</title>
+<title>Скачать Феникс Майнер 4.8b [gpu] (Ethereum AMD/NVIDIA) [2019]</title>
 <meta charset="utf-8" />
-<link rel="shortcut icon" href="items/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="../../items/favicon.ico" type="image/x-icon" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <meta name="MobileOptimized" content="width" />
 <meta name="HandheldFriendly" content="true" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="description" content="PhoenixMiner Настройка с готовыми примерами на русском языке. Рассмотрены все команды программы для максимальной прибыли." />
+<meta name="description" content="Скачайте и настройте Phoenix Miner (Windows и Linux), поддерживающий майнинг на основе Ethash (напр. Ethereum) с 0,65% комиссией и высокой скоростью добычи" />
 
 <link rel="stylesheet" href="/css/phe.css">
 <link rel="stylesheet" href="/css/global.base.css">
@@ -64,8 +64,9 @@
 		<div class="menu-toggle">
 			<ul class="menu clearfix">
 				<li class="first leaf"><a href="https://phoenix-miner.github.io/ru" title="">Главная</a></li>
-				<li class="leaf"><a href="#start" title="">Быстрый старт</a></li>
+				<li class="first leaf"><a href="#start" title="">Быстрый старт</a></li>
 				<li class="leaf"><a href="#download" title="">Скачать</a></li>
+
 			</ul>
 		</div>  
 	</nav>
@@ -75,10 +76,10 @@
 	<div class="phe-header-flex">
 		<div class="phe-header-center phe-vi">
 			<div class="phe-header-composition">
-			<h1>PhoenixMiner 4.8c - AMD+NVIDIA GPU Miner
+			<h1>PhoenixMiner 4.8b - AMD+NVIDIA GPU Miner
 			</h1>
 			<p class="phe-fast"><span class="green">Самый быстрый Ethereum</span>/Ethash майнер с <span class="green">самой низкой комиссией </span></p> 
-			<div class="phe-button"><i class="far fa-arrow-alt-circle-down"></i><a href="https://github.com/Phoenix-Miner/PhoenixMiner/releases/download/4.8c/PhoenixMiner_4.8c_Windows.Password-phoenix.zip">Скачать Сейчас</a>
+			<div class="phe-button"><i class="far fa-arrow-alt-circle-down"></i><a href="https://github.com/Phoenix-Miner/PhoenixMiner/releases/download/4.8b/PhoenixMiner_4.8b_Windows.Password-phoenix.zip">Скачать Сейчас</a>
 			</div>
 			</div>
 		</div>
@@ -86,56 +87,79 @@
 </section>
 
 <section class="phe-art">
+<H1 class="phe-title"><a id="start">Скачать Phoenix Miner для  Ethereum (amd+nvidia)</a></h1>
 	<div class="phe-vi2">
-<H1 class="phe-title"><a id="start">Настройка Claymore Miner для Nicehash и карт NVIDIA 1080/1080TI
-</a></h1>	
-<p>Claymore обычно попадает на ваш жесткий диск через сторонние загрузки через программу Nicehash, и о нем быстро забывают. Вы, вероятно, хотите, по крайней мере, обновить его, это важно для этого руководства. </p>
-<p>Майнинг Эфириума на 1080 / 1080ти? Разве это не должно быть малоприбыльно? Да. Но карты достаточно сильны, чтобы способным добывать хороший Ethereum, а затем можно добавить 30-40% максимальной скорости хеширования.</p>
-<p>Прежде всего, нужно убедиться, что ваша карта находится в состоянии P0, а не в состоянии P2. Если она находится в состоянии P2, вы теряете частоты памяти, которые Claymore Miner хотел бы использовать. Как? Убедитесь, что ваши настройки установлены правильно. </p>
+	
+<h2>PhoenixMiner 4.8b вышел как стабельная версия</h2>
+<ul>
+	<li>Добавлена ​​поддержка последних драйверов AMD для Linux <code>19.30-934563</code> для майнинга с картами RX5700 под Linux. Обратите внимание, что драйверы довольно глючные, и большинство опций разгона не работают, как и большинство опций аппаратного мониторинга.</li>
+	<li>Добавлен новый гибкий способ настройки специфичных для GPU опций с помощью селекторов. Пример: <code>-cclock 1-3:1090,4:1300 -mclock nvidia:+450,amd:2000,*:1900,gtx*1070*ti:+200</code></li>
+</ul>
+
+<p>Для получения дополнительной информации см. ниже.</p>
+
+<ul>
+	<li>Подтверждена поддержка последних драйверов AMD Windows <code>19.11.1</code> (но они уже работают с 4.8b, поскольку в драйвере OpenCL не было значительных изменений)</li>
+	<li>Другие небольшие улучшения и исправления.</li>
+</ul>
+
+<p><strong>О драйверах AMD Linux 19.30-934563:</strong></p>
+
+<p>Эти драйверы, наконец, решают проблему с <code>TLB RX5700</code>, но они не идеальны:</p>
+
+<ol>
+	<li>Большинство параметров аппаратного мониторинга не работают для карт RX5700 - даже температура не сообщается правильно. Сообщается только об использовании энергии, скорости вентилятора и напряжении ядра.</li>
+	<li>Почти все опции аппаратного управления не работают для карт RX5700, за исключением заметного ограничения мощности, поэтому единственный способ избежать потери энергии - использовать <code>-powlim -45</code>. Опции управления вентилятором тоже не работают, поэтому вы будете полагаться на авто-вентилятор.</li>
+</ol>
+
+<p><strong>О новых селекторах, специфичных для GPU опций:</strong></p>
+
+<p>Это лучше всего объяснить на примере: <code>-cclock *:1100,1-3:1090,4:1300</code> - здесь мы устанавливаем тактовую частоту ядра 1100 МГц для всех карт, кроме карт с 1 по 3, на которых установлено на 1090 МГц, а карты от 4 - 1300 МГц.</p>
+
+<p>Часть перед двоеточием: является селектором, который выбирает видеокарты, для которых применяется значение после двоеточия.</p>
+
+<p>Селектор может быть:</p>
+
+<ul>
+	<li><em>один индекс GPU</em>: например, <code>5:1000</code> устанавливает 1000 для 5-го GPU</li>
+	<li><em>диапазон индексов GPU</em>: например, <code>2-5: 1200</code> устанавливает 1200 для видеокарт 2,3,4 и 5</li>
+	<li><em>звездочка</em> - устанавливает значение для всех видеокарт</li>
+	<li><em>метка</em> <code>amd</code> или <code>nvidia</code>: например, <code>amd:1090 </code> устанавливает значение 1090 для всех карт AMD</li>
+	<li><em>произвольная строка</em>, которая начинается с буквы и может содержать буквы, цифры и звездочки, которые сопоставляются с именем видеокарты, как указано PhoenixMiner. Пример: <code>gtx*1070:+500</code> установит значение +500 для всех карт, в именах которых есть «<code>gtx</code>» и «<code>1070</code>», между которыми есть какие-нибудь знаки. Это будет соответствовать «Nvidia GeForce GTX 1070», но не «Nvidia GeForce 1070».</li>
+</ul>
+
+<p>Обратите внимание, что если данной карте соответствует более одного селектора, учитывается только последняя карта. Пример: <code>-cclock *:1100,1-4:1090,2:1300 </code>установит карту 2 в 1300; карты 1, 2 и 4 до 1090; а остальные карты с частотой ядра 1100 МГц.</p>
+
 
 <p>
-<a href="items/start/how/p0.png" target="_blank">
-<img src="items/start/how/p0.png" alt="p0"></a>
+<a href="../items/version/4.8b-ru.png" target="_blank">
+<img src="../items/version/4.8b-ru.png" alt="phoenixminer 4.8b"></a>
+<span class="img-tit nev">PhoenixMiner</span>
 </p>
-<p><strong>Если у вас не стоит </strong><strong>P</strong><strong>0 - сбросьте текущие настройки OC</strong>. Есть два способа сделать это:</p>
-
-
-
-<p>Загрузите текущую версию по ссылкам для скачивания в Github или Mega (не используйте ссылки других людей). Текущая версия на момент написания этой статьи - 12.0.</p>
 </div>
 </section>
+
 
 <section class="phe-down">
 <div class="phe-title whitez1"><a id="download">Начните добывать Ethereum или Ethash монеты с PhoenixMiner</a></div>
 <div class="phe-download">
 	<div class="phe-flex">	
 		<div class="phe-ver">	
-		Актуальная версия - 4.8c
-		MD5: FAAF208B72AFDAF558FA4C1521EDD955 *PhoenixMiner's AMD+NVIDIA GPU Miner v4.8c - Windows.zip
-		<span class="nev2">(<a href="https://github.com/Phoenix-Miner/PhoenixMiner/releases/download/4.8c/PhoenixMiner_4.8c_Linux.zip">Скачать для Linux</a>)</span>	
+		Актуальная версия - 4.8b
+		MD5: 7BE1FE46B42BCC35CB226707DA151E5A *PhoenixMiner's AMD+NVIDIA GPU Miner v4.8b - Windows.zip
+		<span class="nev2">(<a href="https://github.com/Phoenix-Miner/PhoenixMiner/releases/download/4.8b/PhoenixMiner_4.8b_Linux.zip">Скачать для Linux</a>)</span>	
 		</div>
 		<div class="phe-get">
 		<span class="phe-password">Пароль: phoenix</span>
 		<div class="phe-button down"><i class="far fa-arrow-alt-circle-down"></i>
-		<a href="https://github.com/Phoenix-Miner/PhoenixMiner/releases/download/4.8c/PhoenixMiner_4.8c_Windows.Password-phoenix.zip">Скачайте сейчас (Windows x64)</a>
+		<a href="https://github.com/Phoenix-Miner/PhoenixMiner/releases/download/4.8b/PhoenixMiner_4.8b_Windows.Password-phoenix.zip">Скачайте сейчас (Windows x64)</a>
 		</div>
-		<span class="phe-mirror">(<a href="https://mega.nz/#!bepjiSKI!43j10yu6riZ-C0t8VktoW-8eNUeHHdDX0uhDFMG6d70" target="_blank" rel="nofollow">зеркало</a>)</span>
+		<span class="phe-mirror">(<a href="https://mega.nz/#!bXgjVKxb!wz44Tn9X3mnDlpALsKgw0FhjuJQo1unilpw8KdAFXGw" target="_blank" rel="nofollow">зеркало</a>)</span>
 		</div>	
 	</div>
 </div>
 </section>
 
-
-
-<!--
-<section class="phe-comm">
-	<div class="phe-vi2">
-<code>-epool</code>  pheereum pool address. Only Stratum protocol is supported for pools. Miner supports all pools that are compatible with Dwarfpool proxy and accept pheereum wallet address directly.
-	
-	
-	</div>
-</section>
--->
 
 
 <!-- footer-->
