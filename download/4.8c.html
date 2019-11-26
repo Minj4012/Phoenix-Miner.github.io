@@ -96,39 +96,7 @@
 <br />
 &nbsp;</p>
 
-<ul>
-	<li>Added support for the latest AMD drivers under Linux 19.30-934563 and for mining with RX5700 cards under Linux. Note that drivers are quite buggy and most of the overclocking options don't work, as well as most of the hardware monitoring options.</li>
-	<li>Added a new flexible way for setting GPU-specific options with selectors. Example:&nbsp;<strong>-cclock 1-3:1090,4:1300 -mclock nvidia:+450,amd:2000,*:1900,gtx*1070*ti:+200</strong>&nbsp;See bellow for more information</li>
-	<li>Validated support for the latest AMD Windows drivers 19.11.1 (but they already work with 4.8c because there were no significant changes in the OpenCL driver)</li>
-	<li>Other small improvements and fixes.</li>
-</ul>
-
-<p><br />
-If you don't need or want any of these features, there is no need to upgrade yet.<br />
-<br />
-<strong>About the AMD Linux drivers 19.30-934563:</strong><br />
-<br />
-These drivers finally fix the RX5700 TLB problem but they are not perfect:<br />
-- Most of the hardware monitoring options don't work for RX5700 cards - even the temperature is not reported correctly. Only the power usage, fan speed, and core voltage are reported.<br />
-- Almost all hardware control options don't work for RX5700 cards either with the notable exception of power limit, so the only way to avoid wasting power is to use&nbsp;<strong>-powlim -45</strong>&nbsp;or something like this. The fan control options doesn't work either so you will be relying on auto-fan.<br />
-<br />
-<strong>About the new selectors for the GPU-specific options:</strong><br />
-<br />
-This is best explained by example:<strong>&nbsp;-cclock *:1100,1-3:1090,4:1300</strong>&nbsp;- here we are setting core clock to 1100 MHz<br />
-for all cards, except the cards 1 to 3, on which it is set to 1090 MHz, and card 4 to 1300 MHz.<br />
-<br />
-The part before the colon&nbsp;<strong>:</strong>&nbsp;is the selector, which selects the GPUs for which the value after the colon is applied. The selector can be:<br />
-&nbsp; - single GPU index: e.g.&nbsp;<strong>5:1000</strong>&nbsp;sets 1000 for the 5th GPU<br />
-&nbsp; - range of GPU indexes: e.g&nbsp;<strong>2-5:1200</strong>&nbsp;sets 1200 for the GPUs 2,3,4, and 5<br />
-&nbsp; - asterisk, which sets the value for all GPUs<br />
-&nbsp; - label&nbsp;<strong>amd</strong>&nbsp;or&nbsp;<strong>nvidia</strong>: e.g.&nbsp;<strong>amd:1090&nbsp;</strong>sets the value to 1090 for all AMD cards<br />
-&nbsp; - arbitrary string that starts with letter and can contain letters, numbers and asterisks, which is matched against the GPU name as listed by PhoenixMiner.<br />
-&nbsp; &nbsp; Example:&nbsp;<strong>gtx*1070:+500</strong>&nbsp;will set value +500 for all cards which contain '<strong>gtx</strong>' and '<strong>1070</strong>' in their names with anything<br />
-&nbsp; &nbsp; between them. This will match 'Nvidia GeForce GTX 1070' but not 'Nvidia GeForce 1070'.<br />
-&nbsp; &nbsp;<br />
-Note that if more than one selector matches given card, than only the last one counts.<br />
-Example:&nbsp;<strong>-cclock *:1100,1-4:1090,2:1300</strong>&nbsp;will set card 2 to 1300; cards 1,2, and 4 to 1090;<br />
-and the rest of the cards to 1100 MHz core clock.</p>
+<p>Added command-line option <code>-gbase</code> to set 0-base or 1-based GPU indexes (the default is 1). With -<code>gbase 1</code> (the default), the first GPU is GPU1, then GPU2, etc. With <code>-gbase 0</code> the first GPU is GPU0, second - GPU1, etc. Note that this also changes the indexes that are used with all command line options that accept GPU indexes (e.g. <code>-gpus</code>) as well as these used with the interactive commands on the miner shell window</p>
 
 
 <a href="../items/version/4.8c.png" target="_blank">
