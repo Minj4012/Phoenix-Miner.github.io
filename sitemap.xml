@@ -25,6 +25,12 @@
       <priority>.5</priority>
 </url>
 <url>
+      <loc>https://phoenix-miner.github.io/nastroyka-nvidiax</loc>
+      <lastmod>2020-01-09</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>.5</priority>
+</url>
+<url>
       <loc>https://phoenix-miner.github.io/download/4.2c-ru</loc>
       <lastmod>2020-01-09</lastmod>
       <changefreq>weekly</changefreq>
