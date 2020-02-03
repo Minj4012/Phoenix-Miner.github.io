@@ -25,7 +25,13 @@
       <priority>.5</priority>
 </url>
 <url>
-      <loc>https://phoenix-miner.github.io/nastroyka-nvidiax</loc>
+      <loc>https://phoenix-miner.github.io/nastroyka-nvidia</loc>
+      <lastmod>2020-01-09</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>.5</priority>
+</url>
+<url>
+      <loc>https://phoenix-miner.github.io/low-hashrate</loc>
       <lastmod>2020-01-09</lastmod>
       <changefreq>weekly</changefreq>
       <priority>.5</priority>
